@@ -1,0 +1,66 @@
+.container {
+    display: flex;
+    flex:4;
+}
+.menu{
+    flex: 3;
+}
+.content{
+    flex:2;
+}
+.settings-menu {
+    max-width: 30vh;
+    min-height: 95vh;
+    flex:0;
+}
+.settingsMain {
+    margin-bottom: 45px;
+    margin-right: 15px;
+}
+.button2 {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #3a5f36; /* 边框颜色 */
+    color: #d0d4c1; /* 文字颜色 */
+    border-radius: 5px; /* 圆角 */
+    transition: background-color 0.3s ease; /* 添加过渡效果 */
+  }
+
+  /* 鼠标悬停时改变背景色 */
+  .button2:hover {
+    background-color: #364b34; /* 悬停时的背景色 */
+    color: #fff; /* 悬停时的文字颜色 */
+  }
+.settingsMainTitle {
+    color: white;
+    font-size: 25px; /* or use var(--titleSize) if needed */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+.settingsMainTitle:hover{
+    background-color: #3c3b3b;
+}
+
+.settingsContent {
+    flex:6;
+    background-color: #212020;
+    padding-top: 60px;
+    padding-left: 20px;
+    border-left: 1px solid white;
+}
+.selected{
+    background-color: #3c3b3b;
+    border-left: 10px #3a5f36 solid;
+}
+.MC2086{
+    font-size: 60px;
+}
+.standyardavatar{
+    max-width: 100px;
+}

@@ -1,0 +1,55 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="greeting.css">
+</head>
+<body>
+    <div id="popup">
+        <span id="close-btn" onclick="closePopup()">×</span>
+        <h1>Quantum Original入服须知和QCommunity使用指南</h1>
+        <p>最后更新于2024/1/23</p>
+        <h2>您好，玩家！感谢您选择Quantum Original。</h2>
+        <p>作为服务器的管理者，同样作为玩家，我希望您在接下来的游玩中遵守:</p>
+        <li>不恶意卡服，攻击服务器</li>
+        <li>不恶意干扰其它玩家的游玩体验</li>
+        <li>不随便未经允许使用他人物品</li>
+        <li>文明用语</li>
+        <p>QOriginal鼓励大家自由探索任何minecraft玩法都是被认可的。只要你有创意，有想法，QOriginal就可以成为您的舞台。</p>
+        <p>初次使用请在左侧菜单第二个目录绑定您的账号，绑定完成之后即可进入服务器。</p>
+    </div>    
+    <div class="update" id="update"></div>
+    <div class="menu" id="menu">
+       
+    </div>
+    <div class="greetingbg" id="content">
+        <h1 id="greeting"></h1>
+        <div class="tile-container">
+            <div class="tile">
+                <h1 id="formattedDate"></h1>
+                <p id="weekinf"></p>
+            </div>
+            <div class="tile" id="status">
+                <h2>服务器状态：</h2>
+                <h2 id="showsrvstat"></h2>
+                <h2>绑定：</h2> 
+                <p id="bind"></p>
+                <!--<h2>游戏币：</h2>
+                <p id="eco"></p> -->
+             </div>
+             <div class="tile" id="firstLogin">
+                <h2>您好，欢迎您来到Quantum Original!</h2>
+                <p>您似乎是第一次登陆。请阅读《QOriginal用户须知》</p>
+             </div>
+        </div>
+    </div>
+    <div class="notice" id="notice">
+        <h2>This is a dev version of Oregano App.</h2>
+    </div>
+    <script src="js/algorithm.js"></script>
+    <script src="js/net.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/menu.js"></script>
+</body>

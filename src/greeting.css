@@ -1,0 +1,11 @@
+.greetingbg{
+    /*background-image:url("assets/bg.jpg");*/
+    flex: 6;
+    background-color: rgb(47, 58, 50);
+    padding-left: 50px;
+    background-size: cover;
+}
+.greetingbg h1{
+    font-size: 75px;
+    font-weight: 300;
+}

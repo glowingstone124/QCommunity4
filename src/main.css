@@ -1,0 +1,206 @@
+@import"global.css";
+@import"fonts/def.css";
+body {
+    display: flex;
+    max-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    user-select:none;
+}
+
+.regdiv {
+    max-width: 400px;
+    margin-left: 35vh;
+    margin-top: 4vh;
+}
+.hints{
+    font-size: 35px;
+}
+label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+#popup {
+    display: none;
+    position: fixed;
+    min-width: 75vw;
+    min-height: 70vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #4f5953;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#popup.closing {
+    opacity: 0;
+}
+
+#close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    size: 30px;
+}
+
+.off{
+    background-color:#6e1a21;
+    max-width: 15vh;
+    max-height: 5vh;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+.on{
+    background-color:#12502780;
+    max-width: 15vh;
+    max-height: 10vh;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+.menucontent:hover  {
+    background-color: #726f6f; /* 鼠标悬停时的背景颜色 */
+}
+a {
+    padding: auto;
+    text-decoration: none;
+}
+.tile-container {
+    justify-content:initial;
+    margin-top: 20px;
+    max-height: 75vh;
+    min-width: 50vh;
+}
+
+.tile-container {
+    display: flex;
+    flex-direction: row; 
+    justify-content: initial;
+    margin-top: 20px;
+    max-height: 75vh;
+    min-width: 50vh;
+    overflow-x: auto; 
+}
+
+.tile {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    background-color: #52ab55;
+    backdrop-filter: blur(4px);
+    padding: 35px;
+    margin: 70px 50px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* 添加过渡效果 */
+}
+
+.tile:hover {
+    background-color: #3a833d;
+}
+
+.tile::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fff; /* 亮点颜色，可以根据需要调整 */
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* 添加过渡效果 */
+}
+
+.tile:hover::before {
+    opacity: 1;
+    transform: translate(-50%, -50%); /* 调整亮点位置，这里将其移动到磁贴的中心 */
+}
+
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#regHint {
+    color: red;
+    margin-top: 10px;
+}
+label{
+    color:white;
+}
+.menu {
+    background-color: #2a2929;
+    align-content: center;
+    max-width: 15vh;
+    min-width: 7vh;
+    padding-top:10vh ;
+}
+.content {
+    flex: 6;
+    background-color: #212020;
+    padding-left: 50px;
+}
+.regdiv{
+    max-width: 35vh;
+}
+.update{
+    display: none;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+.contenth1{
+    font-size: 75px;
+    font-weight: 100;
+}
+
+.notice {
+    position: fixed;
+    border-radius: 25.5px;
+    top: 10px;
+    right: 10px;
+    width: 200px;
+    height: 100px; 
+    background-color: rgb(51, 59, 118);
+    backdrop-filter: blur(5px) contrast(120%);
+    display: none;
+}
+.menucontent {
+  display: flex;
+  justify-content: left;
+  transition: background-color 0.3s; /* 过渡动画效果 */
+  align-items: center;
+  max-height: 80px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.menucontent a{
+    color:white;
+    font-weight: 100;
+    font-size: 17;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}

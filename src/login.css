@@ -1,0 +1,248 @@
+@import"global.css";
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /* Set background color for the entire body */
+    overflow: hidden;
+    /* Hide the scroll bars */
+    font-family: inter;
+}
+
+#container {
+    display: flex;
+    width: 100%;
+    /* Set width to 100% to take up the entire screen */
+    max-width: 100%;
+    /* Set a maximum width if needed */
+}
+
+.checkbox-wrapper-24 .checkbox {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.checkbox-wrapper-24 label {
+    display: inline-block;
+    color: #333;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox-wrapper-24 label span {
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    transform-origin: center;
+    border: 2px solid #333;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10px;
+    transition: background-color 150ms 200ms, transform 350ms cubic-bezier(0.78, -1.22, 0.17, 1.89);
+}
+
+.checkbox-wrapper-24 label span:before {
+    content: "";
+    width: 0px;
+    height: 2px;
+    border-radius: 2px;
+    background: #333;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 13px;
+    left: 9px;
+    transition: width 50ms ease 50ms;
+    transform-origin: 0% 0%;
+}
+
+.checkbox-wrapper-24 label span:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: #333;
+    position: absolute;
+    transform: rotate(305deg);
+    top: 16px;
+    left: 10px;
+    transition: width 50ms ease;
+    transform-origin: 0% 0%;
+}
+
+.checkbox-wrapper-24 label:hover span:before {
+    width: 5px;
+    transition: width 100ms ease;
+}
+
+.checkbox-wrapper-24 label:hover span:after {
+    width: 10px;
+    transition: width 150ms ease 100ms;
+}
+
+.checkbox-wrapper-24 input[type=checkbox] {
+    display: none;
+}
+
+.checkbox-wrapper-24 input[type=checkbox]:checked+label span {
+    background-color: #333;
+    transform: scale(1.25);
+}
+
+.checkbox-wrapper-24 input[type=checkbox]:checked+label span:after {
+    width: 10px;
+    background: #fff;
+    transition: width 150ms ease 100ms;
+}
+
+.checkbox-wrapper-24 input[type=checkbox]:checked+label span:before {
+    width: 5px;
+    background: #fff;
+    transition: width 150ms ease 100ms;
+}
+
+.checkbox-wrapper-24 input[type=checkbox]:checked+label:hover span {
+    background-color: #333;
+    transform: scale(1.25);
+}
+
+.checkbox-wrapper-24 input[type=checkbox]:checked+label:hover span:after {
+    width: 10px;
+    background: #fff;
+    transition: width 150ms ease 100ms;
+}
+
+.checkbox-wrapper-24 input[type=checkbox]:checked+label:hover span:before {
+    width: 5px;
+    background: #fff;
+    transition: width 150ms ease 100ms;
+}
+
+#loginForm {
+    flex: 1;
+    padding: 20px;
+    background-color: #6DA945;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginForm form {
+    margin-bottom: 20px;
+}
+
+.autologincheck {
+    /* 隐藏原始复选框 */
+    display: none;
+}
+
+/* 自定义样式 */
+.autologincheck+label {
+    position: relative;
+    padding-left: 30px;
+    /* 为了给复选框留出空间 */
+    cursor: pointer;
+    display: inline-block;
+}
+
+.autologincheck+label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    /* 外边框颜色 */
+    background-color: #4CAF50;
+    /* 背景颜色 */
+    border-radius: 4px;
+    /* 圆角 */
+}
+
+.autologincheck:checked+label:before {
+    background-color: #4CAF50;
+    /* 选中时的背景颜色 */
+    border-color: #4CAF50;
+    /* 选中时的边框颜色 */
+}
+
+.autologincheck+label:hover:before {
+    border-color: #555;
+    /* 鼠标悬停时的边框颜色 */
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Content {
+    flex: 1;
+    background-color: #3F6228;
+    /* Set background color for the right section */
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    border: 2px solid #A9D18E;
+    padding: 2px;
+    border-radius: 5px;
+    color: inherit;
+}
+
+#Content h1 {
+    color: #A9D18E
+}
+
+#loginForm .error {
+    border: 1px solid red;
+}
+
+.Big {
+    font-weight: 100;
+    font-size: 70px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #212020;
+    /* 半透明白色背景 */
+    justify-content: center;
+    align-items: center;
+    z-index: 89;
+}
+
+.menu {
+    flex: 1;
+    background-color: #2a2929;
+    align-content: center;
+    z-index: 99;
+}
+
+.content {
+    flex: 3;
+    background-color: #212020;
+    z-index: 99;
+}

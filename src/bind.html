@@ -1,0 +1,50 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="notification.css">
+</head>
+<body>
+    <div class="popup" id="notification"></div>
+    <div class="menu" id="menu">
+        <div class="menucontent"><a>注册/查询</a></div>
+    </div>
+    <div class="content" id="content">
+        <h1 class="contenth1">注册/查询</h1>
+        <div class="regdiv">
+        <form id="register">
+            <h2 class="hints">注册</h2>
+            <label for="username">用户名（Minecraft用户名）</label>
+
+            <input type="text" id="username" name="username" class="input" required>
+
+            <label for="uid">QQ</label>
+
+            <input type="uid" id="uid" name="qq" class="input" required>
+
+            <button type="button" onclick="reg()">注册</button>
+            <p id="regHint"></p>
+        </form>
+        </div>
+        <div class="regdiv">
+            <form id="search">
+                <h2 class="hints">查询</h2>
+                <label for="username">用户名</label>
+    
+                <input type="text" id="sear" name="search" class="input" required/>
+    
+                <button type="button" onclick="s()">查询</button>
+                <p id="searchHint"></p>
+                <p id="searchResult"></p>
+            </form>
+        </div>
+    </div>
+    <script src="js/algorithm.js"></script>
+    <script src="js/notification.js"></script>
+    <script src="js/net.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/menu.js"></script>
+</body>

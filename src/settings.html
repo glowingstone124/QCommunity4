@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="settings.css">
+    <link rel="stylesheet" href="switch.css">
+    <style>
+        .glow-div {
+            width: 200px;
+            height: 200px;
+            background-color: #3498db;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #3498db; /* 发光效果的关键在这行代码 */
+            margin: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="menu" id="menu">
+        </div>
+        <div class="content" id="content">
+            <h1 class="contenth1">设置</h1>
+            <div class="settings-menu" id="settingsmenu">
+                <div class="settingsMain" id="account">
+                    <h1 class="settingsMainTitle" id="accountText">
+                        <img class="icon" src="assets/account.svg" alt="Account Icon">账户设置
+                    </h1>
+                </div>
+                <div class="settingsMain" id="about">
+                    <h1 class="settingsMainTitle" id="accountText">
+                        <img class="icon" src="assets/info.svg" alt="Info Icon">关于
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div id="settingscontent" class="settingsContent">
+            <h1></h1>
+        </div>
+    </div>
+    <script src="js/net.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

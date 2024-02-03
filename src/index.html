@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCommunity</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div id="container">
+        <div id="loginForm">
+            <h1 class="Big">QCommunity</h1>
+            <h2>登录</h2>
+            <form id="form">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" class="input" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" class="input" name="password" required>
+                <input type="checkbox" id="autologin" name="autologin" class="autologincheck">
+                <div class="checkbox-wrapper-24">
+                    <input type="checkbox" id="check-24" name="check" value="" />
+                    <label for="check-24">
+                      <span></span>自动登录
+                    </label>
+                </div>
+                <p id="loginHint"></p>
+                <button type="button" onclick="login()">Login</button>
+                <p>没有账号？<a href="register.html">注册</a>一个</p>
+            </form>
+        </div>
+        <div id="Content">
+            <h1 id="hints"></h1>
+        </div>
+    </div>
+    <div class="overlay" id="overlay">
+        <div class="menu" id="menu">    
+        </div>
+        <div class="content" id="content">
+        </div>
+      </div>
+      <script src="js/config.js"></script>
+    <script src="js/net.js"></script>
+    <script src="js/login.js"></script>
+    <script>
+window.onload = function () {
+    var autologinStatus = localStorage.getItem("autologin");
+    if (autologinStatus === "true") {
+        // 调用登录函数
+       window.location.replace('main.html');
+    }
+}
+    </script>
+</body>
+</html>

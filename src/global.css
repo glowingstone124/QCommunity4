@@ -1,0 +1,78 @@
+@font-face {
+    font-family: Jetbrains;
+    src: url("fonts/jetbrains.ttf");
+}
+@font-face {
+    font-family: Inter;
+    src: url("fonts/inter.ttf");
+}
+@font-face {
+    font-family: MSCN;
+    src: url("fonts/msjh.ttc");
+}
+body *:lang(zh) {
+    font-family: MSCN
+  }
+*{
+    font-family: Inter;
+}
+.input{
+    border-radius: 5px;
+    min-height: 50px;
+    min-width: 35vh;
+    background-color: #819d6d;
+    border: none;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+button {
+    background-color: #A9D18E;
+    min-width: 50px;
+    min-height: 30px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #76A07A; /* Adjust the hover background color as needed */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 54px 55px, rgba(0, 0, 0, 0.17) 0px -12px 30px, rgba(0, 0, 0, 0.17) 0px 4px 6px, rgba(0, 0, 0, 0.22) 0px 12px 13px, rgba(0, 0, 0, 0.14) 0px -3px 5px; /* Adjust the hover box shadow as needed */
+}
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1;}
+    100% { opacity: 0; }
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+  
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+@keyframes pop {
+    0% {
+        transform:translateX(-40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-0px);
+        opacity: 1;
+    }
+}
+@keyframes menuItemHover {
+    0%{
+        transform: scale(100%);
+    }
+    50%{
+        transform: scale(120%);
+    }
+    100%{
+        transform: scale(100%);
+    }
+}
