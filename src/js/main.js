@@ -1,6 +1,6 @@
 const greeting = document.getElementById("greeting");
 const serverStatus = document.getElementById('showsrvstat');
-var apiEndpoint = localStorage.getItem("api")
+var apiEndpoint = 'http://qoriginal.vip:8080'
 var currentDate = new Date();
 var dayOfWeekIndex = currentDate.getDay();
 var monthAbbreviations = [
@@ -59,19 +59,25 @@ switch(day){
 greeting.innerText = checkCurrentTime() + "\n" + localStorage.getItem("username");
 serverStatus.classList.add("off")
 async function syncServer(){
-    try {
-      const serverStat = await get(apiEndpoint + "/qo/alive/download");
-      if (serverStat.stat == 1) {
-        serverStatus.classList.replace('on', 'off');
-        serverStatus.textContent = "关闭";
-      } else {
-        serverStatus.classList.replace('off', 'on');
-        serverStatus.textContent = "在线";
-      }
-    } catch (error) {
+    if (navigator.onLine){
+        try {
+        const serverStat = await get(apiEndpoint + "/qo/alive/download");
+        if (serverStat.stat == 1) {
+            serverStatus.classList.replace('on', 'off');
+            serverStatus.textContent = "关闭";
+        } else {
+            serverStatus.classList.replace('off', 'on');
+            serverStatus.textContent = "在线";
+        }
+        } catch (error) {
+            serverStatus.classList.replace('on', 'off');
+            document.getElementById('status').style.backgroundColor = "rgb(38,42,39)";
+            serverStatus.textContent = "无法访问api";
+        }
+    } else {
         serverStatus.classList.replace('on', 'off');
         document.getElementById('status').style.backgroundColor = "rgb(38,42,39)";
-        serverStatus.textContent = "无法访问api";
+        serverStatus.textContent = "您当前不在线";
     }
   }
 async function getBind(){

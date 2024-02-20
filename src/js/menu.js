@@ -12,6 +12,9 @@ const menucontentDefault = `
     <div class="menucontent">
     <img src="assets/chat.svg"><a href="msglist.html">消息列表</a>
     </div>
+    <div class="menucontent">
+    <img src="assets/log.svg"><a href="log.html">发送日志</a>
+    </div>
 `;
 const menucontentSmall = `
     <div class="menucontent">
@@ -25,6 +28,9 @@ const menucontentSmall = `
     </div>
     <div class="menucontent">
     <a href="msglist.html"><img src="assets/chat.svg"></a>
+    </div>
+    <div class="menucontent">
+    <a href="log.html"><img src="assets/log.svg"></a>
 </div>
 `;
 reportWindowSize();

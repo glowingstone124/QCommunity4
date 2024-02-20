@@ -1,0 +1,31 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="log.css">
+    <link href="
+    https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.min.css
+    " rel="stylesheet">
+</head>
+<body>
+    <div class="menu" id="menu">
+        <div class="menucontent"><a>注册/查询</a></div>
+    </div>
+    <div class="content" id="content">
+        <h1 class="contenth1">日志获取/发送</h1>
+        <div class="fixedSizeMenu">
+            <div class="sel" id="send"><a href="#" onclick="switchMode(0)">发送</a></div>
+            <div class="sel" id="get"><a href="#" onclick="switchMode(1)">获取</a></div>
+        </div>
+        <textarea class="fixedSizeTextarea" id="textarea"></textarea>
+        <div>
+            <p id="path" class="notification">Hello</p>
+            <input id="id" placeholder="填写id"></input>
+        </div>
+        <button id="submit">提交</button>
+    </div>
+    <script src="js/net.js"></script>
+    <script src="js/log.js"></script>
+    <script src="js/menu.js"></script>
+</body>

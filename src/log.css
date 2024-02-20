@@ -1,0 +1,51 @@
+.fixedSizeTextarea {
+    min-width: 50vw;
+    max-width: 50vw;
+    font-family: Jetbrains Mono;
+    min-height: 50vh; 
+    background-color: #444;
+    resize: none;
+    color: lightgray;
+    white-space: pre-line;
+}
+.fixedSizeMenu {
+    min-width: 3vw;
+    max-width: 12vw;
+    font-family: Jetbrains Mono;
+    min-height: 10vh;
+    max-height: 10vh; 
+    color: lightgray;
+    display: flex;
+    align-items: center;
+}
+.find{
+    padding: 0;
+}
+input{
+    background-color: #444;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+.content{
+    padding-left: 10vw;
+}
+.notification{
+    font-size: 35px;
+}
+.sel {
+    background-color: #2a2929;
+    align-content: center;
+    max-width: 6vw;
+    min-width: 6vw;
+    padding:2vw;
+    transition: background-color 0.3s;
+}
+
+.sel:hover {
+    background-color: #313030;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
